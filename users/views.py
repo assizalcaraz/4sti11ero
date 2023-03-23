@@ -10,3 +10,7 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+
+def login(request):
+    return render(request, 'registration/login.html')

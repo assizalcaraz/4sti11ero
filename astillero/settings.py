@@ -60,7 +60,7 @@ ROOT_URLCONF = 'astillero.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'users' / 'templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'astillero.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'users_db',
+        'USER': 'db_user3',
+        'PASSWORD': 'contraseña',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
