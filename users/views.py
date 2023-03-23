@@ -9,4 +9,4 @@ def signup(request):
             return redirect('login')
     else:
         form = SignUpForm()
-    return render(request, 'register/signup.html', {'form': form})
+    return render(request, 'registration/signup.html', {'form': form})
